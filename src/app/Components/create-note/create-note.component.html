@@ -1,0 +1,32 @@
+<div fxLayout="column" fxLayoutAlign="center center">
+  <form [formGroup]="createNoteForm">
+    <div *ngIf="display" style="padding-top: 25px;" fxLayout.xs="row" fxFlex.xs="95">
+        <mat-card >
+          <mat-card-title fxLayout="row" style="width: 600px; height: auto; font-size: 0.875rem;">
+          <input matInput type="text" (click)="takenote()" formControlName="title" placeholder="Take a note">
+          <mat-icon >check_box</mat-icon>
+          <mat-icon style="padding-left: 20px;">brush</mat-icon>
+          <mat-icon style="padding-left: 20px;">insert_photo</mat-icon>
+          </mat-card-title>
+        </mat-card>
+    </div>
+
+    <div *ngIf="!display" style="padding-top: 25px;">
+      <mat-card fxLayout="column" fxLayout.xs="column">
+        <mat-card-title fxLayout="row" style="font-size: 15px; width: 600px; height: auto;">
+          <input matInput type="text" formControlName="title" placeholder="Title">
+          <mat-icon style="float: right;">push_pin</mat-icon>
+        </mat-card-title>
+        
+        <mat-card-subtitle style="font-size: o.875rem;padding-top: 3%;">
+          <input matInput type="text" formControlName="description" placeholder="Take a note..." />
+        </mat-card-subtitle>
+        
+        <mat-card-content fxlayout="row" fxLayoutAlign="space-between center" fxLayout.xs="row">
+          <app-icons></app-icons>
+          <button (click)="onSubmit()" mat-stroked-button>close</button>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </form>
+</div>

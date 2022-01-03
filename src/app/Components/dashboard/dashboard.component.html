@@ -1,0 +1,65 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-toolbar fxLayout="row" class="example-toolbar" fxLayout.xs="row">
+    <div fxLayout.xs="column">
+      <button mat-icon-button (click)="snav.toggle()">
+        <mat-icon style="padding-right: 20px;">menu</mat-icon>
+      </button>
+    </div>
+    <div fxLayout="row" fxLayout.xs="row" fxFlex.xs="95">
+      <div fxlayout="row" fxLayoutAlign="center center">
+        <img src="../assets/keep_2020q4_48dp.png">
+        <span style="color: #5d5d66; margin-left: 10px; font-weight: 400; font-size: 22px;">Fundoo</span>
+      </div>
+
+      <div fxlayout="row" fxLayoutAlign="center"fxLayout.xs="column" fxFlex.xs="95" >
+          <mat-form-field style="width: 780px; padding-left: 20%; outline: none;">
+            <mat-icon class="material-icons-outlined">search</mat-icon>
+            <input matInput type="text" placeholder="" name="search" style="width: 100px; margin-left: 10px; margin-bottom: 7px;">
+          </mat-form-field>
+      </div>
+
+      <div class="right-icons" fxLayout="row" fxLayoutAlign="center center" fxLayout.xs="row" fxFlex.xs="95">
+        <div class="three-icons">
+        <mat-icon class="material-icons-round">refresh</mat-icon>
+        <mat-icon class="material-icons-outlined" style="padding-left: 10px;">view_stream</mat-icon>
+        <mat-icon class="material-icons-outlined" style="padding-left: 10px;">settings</mat-icon>
+        </div>
+        <div>
+        <mat-icon class="material-icons-outlined">apps</mat-icon>
+        <mat-icon class="material-icons-outlined">account_circle</mat-icon>
+        </div>
+      </div>
+    </div>
+  </mat-toolbar>
+  <mat-divider></mat-divider>
+  <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'" [fixedInViewport]="mobileQuery.matches"
+      fixedTopGap="56">
+      <mat-nav-list>
+        <div fxLayout="row">
+          <mat-icon>lightbulb</mat-icon>
+          <mat-list-item role="listitem" (click)="notes()">Notes</mat-list-item>
+        </div>
+        <div fxLayout="row">
+          <mat-icon>notifications</mat-icon>
+          <mat-list-item role="listitem">Reminders</mat-list-item>
+        </div>
+        <div fxLayout="row">
+          <mat-icon>edit</mat-icon>
+          <mat-list-item role="listitem">Edit Labels</mat-list-item>
+        </div>
+        <div fxLayout="row">
+          <mat-icon>archive</mat-icon>
+          <mat-list-item role="listitem">Archieve</mat-list-item>
+        </div>
+        <div fxLayout="row">
+          <mat-icon>restore_from_trash</mat-icon>
+          <mat-list-item role="listitem">Trash</mat-list-item>
+        </div>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

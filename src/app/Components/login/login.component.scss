@@ -1,0 +1,48 @@
+.Container{
+    height: 80%;
+    width: 35%;
+    border: 1px solid #d5d2d2;
+    margin-top: 5%;
+    margin-left: 30%;
+    @media screen and (max-width: 1000px) and (min-width: 360px) {
+        border: 0px solid rgb(224, 219, 219);
+    }
+}
+.Signup h2{
+    font-size: 24px;
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+}
+.Google{
+    margin-top: 5%;
+    font-size: 22px;
+    font-weight: 550;
+    text-decoration: solid;
+    margin-bottom: 5%;
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+}
+.Forget-email{
+    margin-bottom: 12%;
+}
+.content{
+    font-size: 11px;
+    margin-bottom: 12%;
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+}
+.Create{
+    cursor: pointer;
+    font-size: 14px;
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    color: #468ce9;
+    font-weight: 600;
+    margin-bottom: 15%;
+    margin-left: 3px;
+}
+.password{
+    cursor: pointer;
+    font-size: 14px;
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    color: #468ce9;
+    font-weight: 600;
+    margin-bottom: 10%;
+    margin-left: 3px;
+}

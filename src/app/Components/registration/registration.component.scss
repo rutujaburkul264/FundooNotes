@@ -1,0 +1,54 @@
+.Container{
+    height: 88%;
+    width: 55%;
+    border: 1px solid rgb(224, 219, 219);
+    margin-left: 20%;
+    margin-top: 5%;
+    @media screen and (max-width: 1000px) and (min-width: 300px) {
+        border: 0px solid rgb(224, 219, 219)
+    }
+}
+.mat-form-field{
+    width: 100%;
+    @media screen and (max-width: 1000px) and (min-width: 300px) {
+        width: 170%;
+    }
+}
+.Userame{
+    @media screen and (max-width: 1000px) and (min-width: 300px) {
+        width: 150%;
+    }
+}
+.Google{
+    font-size: 25px;
+    font-weight: 400;
+    text-decoration: solid;
+    margin-bottom: 5%;
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+}
+img{
+    width: 80%;
+    height: 80%;
+    margin-left: 10%;
+    margin-top: 20%;
+}
+.Stroked-button{
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+.Checkbox{
+    padding-top: 10px;
+    padding-bottom: 60px;
+}
+.Buttons{
+    @media screen and (max-width: 1000px) and (min-width: 300px) {
+        width: 170%;
+    }
+}
+.Sign-In-Instead{
+    cursor: pointer;
+    font-size: 14px;
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    color: #468ce9;
+    font-weight: 600;
+}

@@ -1,0 +1,51 @@
+<div class="Container" fxLayout="column" fxLayoutAlign="space-around center" fxLayout.xs="column" fxFlex.xs="40">
+    <form [formGroup]="LoginForm" (ngSubmit)="onSubmit()">
+        <div fxLayout.xs="column" fxLayout.xs="column">
+            <div class="Google" fxLayoutAlign="center">
+                <span style="color: #1900ff">F</span>
+                <span style="color: #ff0000">u</span>
+                <span style="color: #fbff00">n</span>
+                <span style="color: #001aff">d</span>
+                <span style="color: #3ab844">o</span>
+                <span style="color: #ff0000">o</span>
+            </div>
+            <div class="Signup" fxLayoutAlign="space-evenly center" fxLayout.xs="column">
+                <h2>Sign in</h2>
+            </div>
+            <div fxLayoutAlign="space-evenly center" fxLayout.xs="column">
+                <h3>Use your Google Account</h3>
+            </div>
+            <div fxLayout.xs="column" fxFlex.xs="95">
+                <div fxLayout="column" FxLayoutAlign="space-evenly center">
+                    <p>
+                        <mat-form-field appearance="outline" style="width: 350px;" fxFlex.xs="100">
+                            <mat-label>Email or phone</mat-label>
+                            <input matInput type="text" formControlName="email" placeholder="">
+                            <mat-error>Enter a email or phone number</mat-error>
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div fxLayout="row">
+                    <p>
+                        <mat-form-field appearance="outline" style="width: 350px;" fxFlex.xs="100">
+                            <mat-label>Password</mat-label>
+                            <input matInput type="password" formControlName="password" placeholder="">
+                            <mat-error>Enter a password</mat-error>
+                        </mat-form-field>
+                    </p>
+                </div>
+                <div class="password" fxLayout="row" fxLayoutAlign="start" fxFlex.xs="95">
+                    <span routerLink= "/forgetEmail">Forgot Password?</span>
+                </div>
+            </div>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="space-between start" fxLayout.xs="row">
+            <div class="Create" fxFlex.xs="100">
+                <span routerLink= "/register">Create Account</span>
+            </div>
+            <div class="Next">
+                <button mat-raised-button color="primary">Sign in</button>
+            </div>
+        </div>
+    </form>
+</div>

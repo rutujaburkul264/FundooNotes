@@ -1,0 +1,32 @@
+<div class="Container" fxLayout="column" fxLayoutAlign="space-around center" fxLayout.xs="column" fxFlex.xs="40">
+    <form [formGroup]="ForgotEmail" (ngSubmit)="onSubmit()">
+    <div class="main" fxLayout.xs="column">
+        <div class="Google" fxLayoutAlign="center">
+            <span style="color: #1900ff">F</span>
+            <span style="color: #ff0000">u</span>
+            <span style="color: #fbff00">n</span>
+            <span style="color: #001aff">d</span>
+            <span style="color: #3ab844">o</span>
+            <span style="color: #ff0000">o</span>
+        </div>
+        <div class="email" fxLayoutAlign="space-evenly center" fxLayout.xs="column">
+            <h3>Find your email</h3>
+        </div>
+        <div class="content" fxLayoutAlign="space-evenly center" fxLayout.xs="column">
+            <h3>Enter you phone number or recovery email</h3>
+        </div>
+        <div fxLayout="row" fxLayout="start" fxLayout.xs="column" fxFlex.xs="95">
+            <p>
+                <mat-form-field appearance="outline" style="width: 350px;">
+                    <mat-label>Email or phone</mat-label>
+                    <input matInput type="text" formControlName="email" placeholder="" />
+                    <mat-error>Enter a valid email or phone number</mat-error>
+                </mat-form-field>
+            </p>
+        </div>
+        <div fxLayout="row" fxLayoutAlign="end" fxlayout.xs="column">
+            <button mat-raised-button color="primary">Next</button>
+        </div>
+    </div>
+    </form>
+</div>

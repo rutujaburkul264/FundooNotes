@@ -1,0 +1,31 @@
+.Container{
+    height: 80%;
+    width: 35%;
+    border: 1px solid #d5d2d2;
+    margin-left: 30%;
+    margin-top: 5%;
+    @media screen and (max-width: 731px) and (min-width: 360px) {
+        border: 0px solid rgb(224, 219, 219);
+    }
+}
+.main{
+    margin-bottom: 30%;
+}
+.Signup h2{
+    font-size: 24px;
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+}
+.Google{
+    font-size: 22px;
+    font-weight: 550;
+    text-decoration: solid;
+    margin-bottom: 5%;
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+}
+.content{
+    font-family: roboto,'Noto Sans Myanmar UI',arial,sans-serif;
+    font-size: 16px;
+}
+.email h3{
+    font-size: 22px;
+}
