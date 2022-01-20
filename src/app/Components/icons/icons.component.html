@@ -1,8 +1,49 @@
-<div fxLayout="row" fxLayout.xs="row" fxFlex="50" fxFlex.xs="95">
-    <mat-icon class="material-icons-outlined">add_alert</mat-icon>
-    <mat-icon class="material-icons-outlined" style="padding-left: 20px;">person_add_alt</mat-icon>
-    <mat-icon class="material-icons-outlined" style="padding-left: 20px;">palette</mat-icon>
-    <mat-icon class="material-icons-outlined" style="padding-left: 20px;">image</mat-icon>
-    <mat-icon class="material-icons-outlined" style="padding-left: 20px;">archive</mat-icon>
-    <mat-icon class="material-icons-outlined" style="padding-left: 20px;">more_vert</mat-icon>
+<div class="icon" fxLayout="row" fxLayout.xs="row" fxFlex="50" fxFlex.xs="95">
+    <button>
+        <mat-icon matTooltip="Remind me">add_alert</mat-icon>
+    </button>
+    <button>
+        <mat-icon matTooltip="Collaborator" style="padding-left: 25px;">person_add_alt</mat-icon>
+    </button>
+    <button [matMenuTriggerFor]="colorMenu" mat-icon-button>
+        <mat-icon matTooltip="Background Options" style="padding-left: 25px;">palette</mat-icon>
+    </button>
+    <mat-menu #colorMenu="matMenu">
+        <div class="card">
+            <div *ngFor="let noteColor of colors" class="Color">
+                <button mat-mini-fab [style.background]="noteColor?.bgColorValue"
+                    (click)="changeColor(noteColor?.bgColorValue)"></button>
+            </div>
+        </div>
+    </mat-menu>
+    <button>
+        <mat-icon matTooltip="Add image" style="padding-left: 35px;">image</mat-icon>
+    </button>
+    <!-- <div *ngIf="!isArchive">
+        <mat-icon matTooltip="Archive" (click)="archiveNote()"
+            style="padding-left: 30px; margin-top: 10px; font-size: 18px;">archive
+        </mat-icon>
+    </div>
+    <div *ngIf="isArchive">
+        <mat-icon matTooltip="unarchive" (click)="unArchiveNote()"
+            style="padding-left: 30px; margin-top: 10px; font-size: 18px;">archive
+        </mat-icon>
+    </div> -->
+
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+        <mat-icon matTooltip="More" style="padding-left: 25px;">more_vert</mat-icon>
+    </button>
+    <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+            <span (click)="deleteNote()">Delete note</span>
+        </button>
+    </mat-menu>
 </div>
+<!-- <div *ngIf="isDeleted">
+    <div>
+        <mat-icon matTooltip="More" style="padding-left: 25px;">delete_forever</mat-icon>
+    </div>
+    <div>
+        <mat-icon matTooltip="More" style="padding-left: 25px;">restore_from_trash</mat-icon>
+    </div>
+</div> -->

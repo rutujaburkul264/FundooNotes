@@ -6,30 +6,90 @@ import { HttpService } from '../HttpService/http.service';
   providedIn: 'root'
 })
 export class NoteService {
-  token:any;
+  token: any;
 
-  constructor(private httpservice:HttpService) {
-   this.token=localStorage.getItem('token')
+  constructor(private httpservice: HttpService) {
+    this.token = localStorage.getItem('token')
   }
 
-  createNote(req:any){
-     console.log("inside note service",req);
+  createNote(req: any) {
+    console.log("inside note service", req);
     let header = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization':this.token
+        'Authorization': this.token
       })
-   }
-   return this.httpservice.post('notes/addNotes', req, true, header)
+    }
+    return this.httpservice.post('notes/addNotes', req, true, header)
   }
-  getNote(){
-    
+  getNote() {
+
     let header = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization':this.token
+        'Authorization': this.token
       })
-   }
-   return this.httpservice.get('notes/getNotesList',true,header)
+    }
+    return this.httpservice.get('notes/getNotesList', true, header)
   }
+  DeleteNote(id: any) {
+
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.httpservice.post('notes/trashNotes', id, true, header)
+  }
+  ArchiveNote(data: any) {
+
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.httpservice.post('notes/archiveNotes', data, true, header)
+  }
+  UpdateNote(data: any) {
+
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.httpservice.post('notes/updateNotes', data, true, header)
+  }
+  colorNote(data: any) {
+
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.httpservice.post('notes/changesColorNotes', data, true, header)
+  }
+  getallArchive() {
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.httpservice.get('notes/getArchiveNotesList', true, header)
+  }
+  getAllTrashList(){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.httpservice.get('notes/getTrashNotesList', true, header)
+  }
+  
 }
+

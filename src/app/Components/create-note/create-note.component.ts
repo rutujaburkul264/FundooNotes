@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormBuilder, FormGroup} from '@angular/forms';
 import { NoteService } from 'src/app/Services/NoteService/note.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { NoteService } from 'src/app/Services/NoteService/note.service';
   styleUrls: ['./create-note.component.scss']
 })
 export class CreateNoteComponent implements OnInit {
+  @Output() autoRefreshEvent = new EventEmitter<string>();
   createNoteForm!: FormGroup;
   submitted = false;
   display = true;
@@ -36,6 +37,7 @@ export class CreateNoteComponent implements OnInit {
       }
       this.noteservice.createNote(data).subscribe((response:any)=>{
         console.log(response)
+        this.autoRefreshEvent.emit(response)
       })
       
     }

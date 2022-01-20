@@ -25,4 +25,13 @@ export class DashboardComponent implements OnInit {
   notes(){
     this.route.navigateByUrl('dashboard/notes')
   }
+  Archive(){
+    this.route.navigateByUrl('dashboard/archiveNotes')
+  }
+  Trash(){
+    this.route.navigateByUrl('dashboard/trash')
+  }
+  Reminders(){
+    this.route.navigateByUrl('dashboard/reminders')
+  }
 }

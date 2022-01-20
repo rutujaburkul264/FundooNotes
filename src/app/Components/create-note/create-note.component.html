@@ -4,18 +4,18 @@
         <mat-card >
           <mat-card-title fxLayout="row" style="width: 600px; height: auto; font-size: 0.875rem;">
           <input matInput type="text" (click)="takenote()" formControlName="title" placeholder="Take a note">
-          <mat-icon >check_box</mat-icon>
-          <mat-icon style="padding-left: 20px;">brush</mat-icon>
-          <mat-icon style="padding-left: 20px;">insert_photo</mat-icon>
+          <mat-icon matTooltip="New list" style="opacity: 0.6;">check_box</mat-icon>
+          <mat-icon matTooltip="New note with drawing" style="padding-left: 20px; opacity: 0.6;">brush</mat-icon>
+          <mat-icon matTooltip="New note with image" style="padding-left: 20px; opacity: 0.6;">insert_photo</mat-icon>
           </mat-card-title>
         </mat-card>
     </div>
 
-    <div *ngIf="!display" style="padding-top: 25px;">
+    <div class="card" *ngIf="!display" style="padding-top: 25px;">
       <mat-card fxLayout="column" fxLayout.xs="column">
         <mat-card-title fxLayout="row" style="font-size: 15px; width: 600px; height: auto;">
           <input matInput type="text" formControlName="title" placeholder="Title">
-          <mat-icon style="float: right;">push_pin</mat-icon>
+          <mat-icon matTooltip="Pin note" style="float: right; opacity: 0.6;">push_pin</mat-icon>
         </mat-card-title>
         
         <mat-card-subtitle style="font-size: o.875rem;padding-top: 3%;">

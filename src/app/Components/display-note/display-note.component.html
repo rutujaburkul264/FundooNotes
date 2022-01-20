@@ -1,13 +1,21 @@
-<div fxlayout="row" fxLayoutAlign="start center" style="padding-top: 10%; padding-left: 5%;" fxLayout.xs="column">
-    <mat-card style="width: auto; height: auto;">
-        <mat-card-title fxLayout="row" fxLayoutAlign="space-between center">Title
-        <mat-icon style="padding-right: 20px;">push_pin</mat-icon>
-        </mat-card-title>
-        <mat-card-subtitle style="font-size: 15px; padding-top: 5%;">
-            <p>
-                hello
-            </p>
-        </mat-card-subtitle>
-        <app-icons></app-icons>
-    </mat-card>
+<div fxLayout="row wrap" fxLayoutGap="16px grid" fxLayoutAlign="start center"
+    style="padding-top: 10%; padding-left: 5%;" fxLayout.xs="column">
+    <div fxFlex="23%" fxFlex.xs="100%" fxFlex.xs="40%" *ngFor="let note of childmessage;">
+        <mat-card class="example-card" style="width: auto; height: auto;" [style.background]="note.color">
+            <mat-card-title-group (click)="openDialog(note)">
+                <mat-card-title>
+                    {{note.title}}
+                </mat-card-title>
+                <mat-icon matTooltip="Pin note" style="margin-right: 12%; opacity: 0.6;">push_pin</mat-icon>
+                <mat-card-subtitle style="font-size: 15px; padding-top: 5%;">
+                    <p>
+                        {{note.description}}
+                    </p>
+                </mat-card-subtitle>
+            </mat-card-title-group>
+            <mat-card-content >
+                <app-icons [CardObject]= "note" (changeColorOfNote)="messageRecievedFromNote($event)"></app-icons>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </div>

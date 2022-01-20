@@ -13,7 +13,10 @@ import {MatListModule} from '@angular/material/list';
 import {MatAutocompleteModule} from '@angular/material/autocomplete';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {MatCardModule} from '@angular/material/card';
-
+import {MatDialogModule} from '@angular/material/dialog';
+import {MatSnackBarModule} from '@angular/material/snack-bar';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatMenuModule} from '@angular/material/menu';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -27,6 +30,10 @@ import { CreateNoteComponent } from './Components/create-note/create-note.compon
 import { GetAllNotesComponent } from './Components/get-all-notes/get-all-notes.component';
 import { DisplayNoteComponent } from './Components/display-note/display-note.component';
 import { IconsComponent } from './Components/icons/icons.component';
+import { UpdateNoteComponent } from './Components/update-note/update-note.component';
+import { GetAllArchiveComponent } from './Components/get-all-archive/get-all-archive.component';
+import { TrashNotesComponent } from './Components/trash-notes/trash-notes.component';
+import { GetAllRemindersComponent } from './Components/get-all-reminders/get-all-reminders.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +46,11 @@ import { IconsComponent } from './Components/icons/icons.component';
     CreateNoteComponent,
     GetAllNotesComponent,
     DisplayNoteComponent,
-    IconsComponent
+    IconsComponent,
+    UpdateNoteComponent,
+    GetAllArchiveComponent,
+    TrashNotesComponent,
+    GetAllRemindersComponent
   ],
   imports: [
     BrowserModule,
@@ -53,11 +64,15 @@ import { IconsComponent } from './Components/icons/icons.component';
     MatInputModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatDialogModule,
     MatIconModule,
     MatListModule,
+    MatTooltipModule,
     MatAutocompleteModule,
     MatExpansionModule,
     MatCardModule,
+    MatSnackBarModule,
+    MatMenuModule,
     HttpClientModule
   ],
   providers: [],

@@ -13,10 +13,6 @@
     z-index: 2;
   }
   
-  h1.example-app-name {
-    margin-left: 8px;
-  }
-  
   .example-sidenav-container {
     /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
@@ -29,29 +25,53 @@
     flex: 1 0 auto;
   }
   .mat-icon{
-    margin-left: 10px;
-    margin-top: 14px;
+    margin-top: 13px;
+    font-size: 22px;
   }
-  .mat-list-item{
-    font-family: 'Google Sans',Roboto,Arial,sans-serif;
-    font-size: 15px;
+  .mat-form-field{
+    margin-top: 10px;
   }
   .three-icons{
-    padding-right: 50px;
+    padding-right: 60px;
   }
   .right-icons{
-    padding-left: 150px;
-  }
-  .span{
-    font-family: 'Google Sans',Roboto,Arial,sans-serif;
-    font-size: 22px;
-    display: inline-block;
+    padding-left: 130px;
+    opacity: 0.6;
   }
   img{
     height: 40px;
     width: 40px;
     margin-left: 10px;
   }
-  .material-icons-outlined{
-    cursor: pointer;
-  }
+  .Button{
+  height: 50px;
+  width: 50px;
+  // margin: 0 5px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 5px;
+  transition: all 0.3s ease-out;
+ }
+ .Button:hover{
+  height: 55px;
+  border-radius: 0 25px 25px 0;
+  background-color: blanchedalmond;
+  font-size: 20px;
+  width: 200px;
+ }
+.Button .icon{
+  height: 60px;
+  width: 60px;
+  line-height: 30px;
+  font-size: 25px;
+  border-radius: 50px;
+  margin: 11px 15px;
+  font-size: 22px;
+}
+.Button .mat-list-item{
+  font-family: 'Google Sans',Roboto,Arial,sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 50px;
+  margin-left: 10px;
+}

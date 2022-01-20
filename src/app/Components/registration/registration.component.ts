@@ -25,6 +25,7 @@ export class RegistrationComponent implements OnInit {
     })
   }
   
+  // convenience getter for easy access to form fields
   get f() { return this.registerForm.controls; }
 
     onSubmit() {
@@ -41,8 +42,7 @@ export class RegistrationComponent implements OnInit {
       }
       this.userservice.register(data).subscribe((response:any)=>{
         console.log(response)
-      })
-      
+      }) 
     }
     else{
       console.log("Form is invalid")
