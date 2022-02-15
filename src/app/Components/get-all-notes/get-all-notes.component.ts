@@ -19,7 +19,7 @@ export class GetAllNotesComponent implements OnInit {
       console.log(result)
       this.getallnote();
     })
-    this.getallnote()
+    this.getallnote();
   }
   messageRecieved(e:any) {
     console.log(e)

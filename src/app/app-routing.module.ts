@@ -1,4 +1,3 @@
-import { createComponentDefinitionMap } from '@angular/compiler/src/render3/partial/component';
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AuthenticationGuard } from './Components/authentication.guard';

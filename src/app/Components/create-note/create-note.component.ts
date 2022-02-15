@@ -24,7 +24,7 @@ export class CreateNoteComponent implements OnInit {
   get f() { return this.createNoteForm.controls; }
 
   takenote(){
-    this.display=false;
+    this.display = false;
   }
     onSubmit() {
     this.submitted = true;

@@ -19,17 +19,11 @@
     <button>
         <mat-icon matTooltip="Add image" style="padding-left: 35px;">image</mat-icon>
     </button>
-    <!-- <div *ngIf="!isArchive">
+    <button>
         <mat-icon matTooltip="Archive" (click)="archiveNote()"
             style="padding-left: 30px; margin-top: 10px; font-size: 18px;">archive
         </mat-icon>
-    </div>
-    <div *ngIf="isArchive">
-        <mat-icon matTooltip="unarchive" (click)="unArchiveNote()"
-            style="padding-left: 30px; margin-top: 10px; font-size: 18px;">archive
-        </mat-icon>
-    </div> -->
-
+    </button>
     <button mat-icon-button [matMenuTriggerFor]="menu">
         <mat-icon matTooltip="More" style="padding-left: 25px;">more_vert</mat-icon>
     </button>
@@ -39,11 +33,3 @@
         </button>
     </mat-menu>
 </div>
-<!-- <div *ngIf="isDeleted">
-    <div>
-        <mat-icon matTooltip="More" style="padding-left: 25px;">delete_forever</mat-icon>
-    </div>
-    <div>
-        <mat-icon matTooltip="More" style="padding-left: 25px;">restore_from_trash</mat-icon>
-    </div>
-</div> -->
